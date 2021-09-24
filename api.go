@@ -30,3 +30,5 @@ func populationhandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("populationhandler")
 	fmt.Fprintf(w, "populationhandler : %s", r.URL.Path)
 }
+
+func tmp{}
