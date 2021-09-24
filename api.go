@@ -12,6 +12,7 @@ func main() {
 	r.HandleFunc("/", cityhome).Methods("GET")
 	r.HandleFunc("/cities", citieshandler).Methods("GET")
 	r.HandleFunc("/populations", populationhandler).Methods("GET")
+	r.HandleFunc("/educations", educationhandler).Methods("GET")
 
 	http.ListenAndServe(":8185", r)
 }
@@ -31,4 +32,7 @@ func populationhandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "populationhandler : %s", r.URL.Path)
 }
 
-func tmp{}
+func educationhandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("educationhandler")
+	fmt.Fprintf(w, "educationhandler : %s", r.URL.Path)
+}
